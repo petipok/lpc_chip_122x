@@ -120,17 +120,17 @@ warning message, define ENABLE_UNTESTED_CODE.
 #define LPC_WWDT_BASE             0x40004000
 #define LPC_USART_BASE            0x40008000
 #define LPC_USART1_BASE           0x4000C000
-#define LPC_TIMER16_0_BASE        0x4000C000
-#define LPC_TIMER16_1_BASE        0x40010000
-#define LPC_TIMER32_0_BASE        0x40014000
-#define LPC_TIMER32_1_BASE        0x40018000
+#define LPC_TIMER16_0_BASE        0x40010000
+#define LPC_TIMER16_1_BASE        0x40014000
+#define LPC_TIMER32_0_BASE        0x40018000
+#define LPC_TIMER32_1_BASE        0x4001C000
 
 
 #define LPC_ADC_BASE              0x40020000
 #define LPC_ACMP_BASE             0x40054000
 
 #define LPC_PMU_BASE              0x40038000
-#define LPC_FLASH_BASE            0x4003C000
+//#define LPC_FLASH_BASE            0x4003C000
 #define LPC_SSP0_BASE             0x40040000
 #define LPC_IOCON_BASE            0x40044000
 #define LPC_SYSCTL_BASE           0x40048000

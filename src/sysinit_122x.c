@@ -54,7 +54,14 @@ void Chip_SystemInit(void)
 	Chip_SYSCTL_PowerUp(SYSCTL_POWERDOWN_IRC_PD);
 	Chip_SYSCTL_PowerUp(SYSCTL_POWERDOWN_IRCOUT_PD);
 
+	// Uncomment these if you want to use crystal oscillator
+	//Chip_SYSCTL_PowerUp(SYSCTL_POWERDOWN_SYSOSC_PD);
+	//Chip_SYSCTL_PowerUp(SYSCTL_POWERDOWN_SYSOSC_PD);
+
 	/* Set system PLL input to main oscillator */
+
+	// Select the PLL input source, MAINOSC is the crystal
+	//Chip_Clock_SetSystemPLLSource(SYSCTL_PLLCLKSRC_MAINOSC);
 	Chip_Clock_SetSystemPLLSource(SYSCTL_PLLCLKSRC_IRC);
 
 	/* Power down PLL to change the PLL divider ratio */
