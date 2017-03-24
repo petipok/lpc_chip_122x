@@ -48,9 +48,7 @@
 /* Sets I/O Control pin mux */
 void Chip_IOCON_PinMuxSet(LPC_IOCON_T *pIOCON, CHIP_IOCON_PIO_T pio, uint32_t modefunc)
 {
-
-	pIOCON[(uint32_t)pio].REG = modefunc;
-
+	pIOCON[pio].REG = modefunc | (0x1<<7);		// bit 7 is a reserved bit and should be always 1
 }
 
 #endif

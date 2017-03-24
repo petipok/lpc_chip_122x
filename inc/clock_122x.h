@@ -192,7 +192,7 @@ typedef enum CHIP_SYSCTL_CLOCK {
 	SYSCTL_CLOCK_CT32B1,				/*!< 10: 32-bit Counter/timer 1 clock */
 	SYSCTL_CLOCK_SSP0,					/*!< 11: SSP0 clock */
 	SYSCTL_CLOCK_UART0,					/*!< 12: UART0 clock */
-	SYSCTL_CLOCK_UART1,					/*!< 13: UART0 clock */
+	SYSCTL_CLOCK_UART1,					/*!< 13: UART1 clock */
 	SYSCTL_CLOCK_ADC,					/*!< 14: ADC clock */
 
 	SYSCTL_CLOCK_WDT,					/*!< 15: Watchdog timer clock */

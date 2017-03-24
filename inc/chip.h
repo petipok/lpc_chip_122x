@@ -134,6 +134,7 @@ warning message, define ENABLE_UNTESTED_CODE.
 #define LPC_SSP0_BASE             0x40040000
 #define LPC_IOCON_BASE            0x40044000
 #define LPC_SYSCTL_BASE           0x40048000
+#define LPC_RTC_BASE			  0x40050000
 
 #define LPC_GPIO_PORT0_BASE       0x50000000
 #define LPC_GPIO_PORT1_BASE       0x50010000
@@ -146,22 +147,20 @@ warning message, define ENABLE_UNTESTED_CODE.
 #define LPC_I2C                   ((LPC_I2C_T              *) LPC_I2C_BASE)
 #define LPC_WWDT                  ((LPC_WWDT_T             *) LPC_WWDT_BASE)
 #define LPC_USART                 ((LPC_USART_T            *) LPC_USART_BASE)
+#define LPC_USART0                LPC_USART
+#define LPC_USART1                ((LPC_USART_T            *) LPC_USART1_BASE)
 #define LPC_TIMER16_0             ((LPC_TIMER_T            *) LPC_TIMER16_0_BASE)
 #define LPC_TIMER16_1             ((LPC_TIMER_T            *) LPC_TIMER16_1_BASE)
 #define LPC_TIMER32_0             ((LPC_TIMER_T            *) LPC_TIMER32_0_BASE)
 #define LPC_TIMER32_1             ((LPC_TIMER_T            *) LPC_TIMER32_1_BASE)
 #define LPC_ADC                   ((LPC_ADC_T              *) LPC_ADC_BASE)
-#define LPC_USART0                LPC_USART
-#define LPC_USART1                ((LPC_USART_T            *) LPC_USART1_BASE)
-#define LPC_USART2                ((LPC_USART_T            *) LPC_USART2_BASE)
-#define LPC_USART0                LPC_USART
-#define LPC_USART1                ((LPC_USART_T            *) LPC_USART1_BASE)
 #define LPC_CMP                   ((LPC_CMP_T              *) LPC_ACMP_BASE)
 #define LPC_PMU                   ((LPC_PMU_T              *) LPC_PMU_BASE)
 //#define LPC_FMC                   ((LPC_FMC_T              *) LPC_FLASH_BASE)
 #define LPC_SSP0                  ((LPC_SSP_T              *) LPC_SSP0_BASE)
 #define LPC_IOCON                 ((LPC_IOCON_T            *) LPC_IOCON_BASE)
 #define LPC_SYSCTL                ((LPC_SYSCTL_T           *) LPC_SYSCTL_BASE)
+#define LPC_RTC					  ((LPC_RTC_T)             *) LPC_RTC_BASE)
 #define LPC_GPIO                  ((LPC_GPIO_T             *) LPC_GPIO_PORT0_BASE)
 //#define LPC_ROM_API               (*((LPC_ROM_API_T        * *) LPC_ROM_API_BASE_LOC))
 
@@ -213,6 +212,7 @@ extern const uint32_t ExtRateIn;
 #include "gpio_122x.h"
 #include "i2c_122x.h"
 #include "pinint_122x.h"
+#include "rtc_122x.h"
 
 
 

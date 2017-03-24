@@ -52,6 +52,7 @@ void Chip_UART_Init(LPC_USART_T *pUART)
 {
 	if(pUART == LPC_USART0)
 	{
+		Chip_SYSCTL_DeassertPeriphReset(RESET_USART0);
 		Chip_Clock_EnablePeriphClock(SYSCTL_CLOCK_UART0);
 		Chip_Clock_SetUART0ClockDiv(1);
 	}
@@ -74,7 +75,14 @@ void Chip_UART_Init(LPC_USART_T *pUART)
 /* De-initializes the pUART peripheral */
 void Chip_UART_DeInit(LPC_USART_T *pUART)
 {
-	Chip_Clock_DisablePeriphClock(SYSCTL_CLOCK_UART0);
+	if(pUART == LPC_USART0)
+	{
+		Chip_Clock_DisablePeriphClock(SYSCTL_CLOCK_UART0);
+	}
+	else
+	{
+		Chip_Clock_DisablePeriphClock(SYSCTL_CLOCK_UART1);
+	}
 }
 
 /* Transmit a byte array through the UART peripheral (non-blocking) */
@@ -162,7 +170,7 @@ uint32_t Chip_UART_SetBaud(LPC_USART_T *pUART, uint32_t baudrate)
 
 	/* Fractional FDR alreadt setup for 1 in UART init */
 
-	return clkin / div;
+	return clkin / div / 16;
 }
 
 /* UART receive-only interrupt handler for ring buffers */
